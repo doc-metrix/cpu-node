@@ -18,6 +18,7 @@ test/
 ###########
 .npmignore
 node_modules/
+bower_components/
 
 # Logs #
 ########

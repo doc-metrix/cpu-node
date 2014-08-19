@@ -1,4 +1,5 @@
 {
+	"name": "cpu-node",
 	"dependencies": {
 		"doc-metrix-cpu": "0.x.x"
 	}

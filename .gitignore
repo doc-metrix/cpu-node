@@ -51,6 +51,7 @@ Desktop.ini
 # Node.js #
 ###########
 node_modules/
+bower_components/
 
 # Matlab #
 ##########
