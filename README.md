@@ -2,7 +2,7 @@ doc-metrix-cpu
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url] [![Github Issues][github-issues-image]][github-issues-url]
 
-Provides an API to doc-metrix CPU performance metrics.
+Provides an API for doc-metrix CPU performance metrics.
 
 
 ## Installation
@@ -74,7 +74,7 @@ $ open reports/coverage/lcov-report/index.html
 ---
 ## Copyright
 
-Copyright &copy; 2014. Athan Reines.
+Copyright &copy; 2014. NodePrime.
 
 
 [npm-image]: http://img.shields.io/npm/v/doc-metrix-cpu.svg

@@ -1,7 +1,7 @@
 {
   "name": "doc-metrix-cpu",
   "version": "0.0.0",
-  "description": "Provides an API to doc-metrix CPU performance metrics.",
+  "description": "Provides an API for doc-metrix CPU performance metrics.",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
