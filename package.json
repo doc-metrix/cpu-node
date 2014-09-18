@@ -32,7 +32,8 @@
     "documentation",
     "specification",
     "spec",
-    "cpu"
+    "cpu",
+    "NodePrime"
   ],
   "bugs": {
     "url": "https://github.com/doc-metrix/cpu-node/issues"
