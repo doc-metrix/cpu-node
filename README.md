@@ -2,7 +2,7 @@ doc-metrix-cpu
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
-Provides an API for doc-metrix [cpu](https://github.com/doc-metrix/cpu) performance metrics.
+Provides an API for doc-metrix [CPU](https://github.com/doc-metrix/cpu) performance metrics.
 
 
 ## Installation
@@ -16,10 +16,10 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-To interface with the [specification](https://github.com/doc-metrix/INSERT_NAME),
+To interface with the CPU [specification](https://github.com/doc-metrix/cpu),
 
 ``` javascript
-var metrics = require( 'doc-metrix-NAME' );
+var metrics = require( 'doc-metrix-cpu' );
 ```
 
 The interface has the following methods...
@@ -35,10 +35,10 @@ Metric centric methods...
 Checks whether a metric having the provided `name` is included in the specification.
 
 ``` javascript
-metrics.mexists( '' );
+metrics.mexists( 'cpu.utilization' );
 // returns true
 
-metrics.mexists( '' );
+metrics.mexists( 'mem.swapSpaceUtilization' );
 // returns false
 ```
 
@@ -60,7 +60,7 @@ metrics.mlist();
 Lists all metrics satisfying a regular expression filter.
 
 ``` javascript
-metrics.mfilter( /.+/i );
+metrics.mfilter( /Guest/i );
 ```
 
 Note: filtering for metric names __is__ case sensitive. Ignore case `/i` for case insensitive filtering.
@@ -71,17 +71,17 @@ Note: filtering for metric names __is__ case sensitive. Ignore case `/i` for cas
 Returns metric specifications. The provided `filter` may be a `string` or a regular expression. If a metric does not have a specification, returns `null`. To return a single specification,
 
 ``` javascript
-metrics.mget( '' );
+metrics.mget( 'cpu.utilization' );
 // returns {...}
 
-metrics.mget( '' );
+metrics.mget( 'mem.swapSpaceUtilization' );
 // returns null
 ```
 
 To return metric specifications matching a filter,
 
 ``` javascript
-metrics.mget( /.+/i );
+metrics.mget( /Guest/i );
 // returns {...}
 ```
 
@@ -107,10 +107,10 @@ Device centric methods...
 Checks whether a device having the provided `name` is known to have associated metric specifications.
 
 ``` javascript
-metrics.dexists( '' );
+metrics.dexists( 'cpu0' );
 // returns true
 
-metrics.dexists( '' );
+metrics.dexists( 'eth0' );
 // returns false
 ```
 
@@ -131,10 +131,10 @@ Note: the returned list __may__ contain regular expressions. Regular expressions
 Returns specifications associated with devices. If a device does not have associated specifications, returns `null`. To return a single device's specifications,
 
 ``` javascript
-metrics.dget( '' );
+metrics.dget( 'cpu0' );
 // returns {"metric0":{...},"metric1":{...},...}
 
-metrics.dget( '' );
+metrics.dget( 'eth0' );
 // returns null
 ```
 
@@ -166,7 +166,7 @@ $ npm install
 $ npm update
 ```
 
-this package, when used as a dependency, will attempt an HTTP request to retrieve the latest specification from [Github](https://github.com/doc-metrix/INSERT_NAME).
+this package, when used as a dependency, will attempt an HTTP request to retrieve the latest specification from [Github](https://github.com/doc-metrix/cpu).
 
 During development, run the following command to retrieve the latest specification
 

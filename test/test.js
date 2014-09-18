@@ -5,7 +5,7 @@ var // Expectation library:
 	chai = require( 'chai' ),
 
 	// Metrics specification:
-	METRICS = require( '' ),
+	METRICS = require( './../specs/cpu.json' ),
 
 	// Module to be tested:
 	metrics = require( './../lib' );
@@ -71,7 +71,7 @@ describe( 'doc-metrix-cpu', function tests() {
 		});
 
 		it( 'should filter documented metric names', function test() {
-			assert.isArray( metrics.mfilter( /.+/i ) );
+			assert.isArray( metrics.mfilter( /Guest/i ) );
 		});
 
 	});
@@ -165,7 +165,7 @@ describe( 'doc-metrix-cpu', function tests() {
 		});
 
 		it( 'should return a filtered list of metric specifications', function test() {
-			assert.isObject( metrics.mget( /.+/i ) );
+			assert.isObject( metrics.mget( /Guest/i ) );
 		});
 
 		it( 'should return null if no metrics match a provided filter', function test() {
@@ -187,7 +187,7 @@ describe( 'doc-metrix-cpu', function tests() {
 		it( 'should list all devices associated with metrics', function test() {
 			var list = metrics.dlist();
 			assert.isArray( list );
-			assert.ok( list.indexOf( '' ) !== -1 );
+			assert.ok( list.indexOf( 'cpu\\d+' ) !== -1 );
 		});
 
 	});
@@ -226,11 +226,11 @@ describe( 'doc-metrix-cpu', function tests() {
 		});
 
 		it( 'should return true for a device which has associated specifications', function test() {
-			assert.ok( metrics.dexists( '' ) );
+			assert.ok( metrics.dexists( 'cpu0' ) );
 		});
 
 		it( 'should return true for a device which has an associated specification regardless of input name case', function test() {
-			assert.ok( metrics.dexists( '' ) );
+			assert.ok( metrics.dexists( 'cPu0' ) );
 		});
 
 	});
@@ -269,7 +269,7 @@ describe( 'doc-metrix-cpu', function tests() {
 		});
 
 		it( 'should return metric specification(s) associated with a device', function test() {
-			var obj = metrics.dget( '' );
+			var obj = metrics.dget( 'cpu0' );
 			assert.isObject( obj );
 			assert.ok( Object.keys( obj ).length );
 		});
@@ -281,7 +281,7 @@ describe( 'doc-metrix-cpu', function tests() {
 		});
 
 		it( 'should return metric specification(s) associated with a device regardless of input device case', function test() {
-			var obj = metrics.dget( '' );
+			var obj = metrics.dget( 'cPu0' );
 			assert.isObject( obj );
 			assert.ok( Object.keys( obj ).length );
 		});

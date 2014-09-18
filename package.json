@@ -1,7 +1,7 @@
 {
   "name": "doc-metrix-cpu",
   "version": "0.0.0",
-  "description": "Provides an API for doc-metrix [cpu](https://github.com/doc-metrix/cpu) performance metrics.",
+  "description": "Provides an API for doc-metrix CPU performance metrics.",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
@@ -26,7 +26,13 @@
     "url": "git://github.com/doc-metrix/cpu-node.git"
   },
   "keywords": [
-    "doc-metrix"
+    "doc-metrix",
+    "performance metrics",
+    "metrics",
+    "documentation",
+    "specification",
+    "spec",
+    "cpu"
   ],
   "bugs": {
     "url": "https://github.com/doc-metrix/cpu-node/issues"

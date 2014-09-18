@@ -39,7 +39,9 @@
 
 	// SPECIFICATIONS //
 
-	var resources = {};
+	var resources = {
+			'cpu': 'https://raw.githubusercontent.com/doc-metrix/cpu/master/spec/index.json'
+		};
 
 
 	// VARIABLES //

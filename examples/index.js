@@ -37,14 +37,14 @@
 	// SCRIPT //
 
 	// Check if a metric exists:
-	console.log( metrics.mexists( '' ) );
+	console.log( metrics.mexists( 'cpu.utilization' ) );
 
 	/**
 	* Returns:
 	*	true
 	*/
 
-	console.log( metrics.mexists( '' ) );
+	console.log( metrics.mexists( 'mem.swapSpaceUtilization' ) );
 
 	/**
 	* Returns:
@@ -65,7 +65,7 @@
 	*/
 
 	// Filter the list of metrics:
-	console.log( metrics.mfilter( /.+/i ) );
+	console.log( metrics.mfilter( /Guest/i ) );
 
 	/**
 	* Returns:
@@ -78,7 +78,7 @@
 	*/
 
 	// Get a metric specification:
-	console.log( metrics.mget( '' ) );
+	console.log( metrics.mget( 'cpu.utilization' ) );
 
 	/**
 	* Returns:
@@ -90,7 +90,7 @@
 	*/
 
 	// Get metric specifications matching a filter:
-	console.log( metrics.mget( /.+/i ) );
+	console.log( metrics.mget( /Guest/i ) );
 
 	/**
 	* Returns:
@@ -110,14 +110,14 @@
 	*/
 
 	// Check if a device is known to have associated metrics:
-	console.log( metrics.dexists( '' ) );
+	console.log( metrics.dexists( 'cpu0' ) );
 
 	/**
 	* Returns:
 	*	true
 	*/
 
-	console.log( metrics.dexists( '' ) );
+	console.log( metrics.dexists( 'eth0' ) );
 
 	/**
 	* Returns:
@@ -138,7 +138,7 @@
 	*/
 
 	// Get a list of metric specifications arranged by device name:
-	console.log( metrics.dget( '' ) );
+	console.log( metrics.dget( 'cpu0' ) );
 
 	/**
 	* Returns:
